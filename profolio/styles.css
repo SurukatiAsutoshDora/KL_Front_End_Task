@@ -1,0 +1,9 @@
+body{
+    background-color: white;
+}
+
+.nav-item active{
+    position: aboslute;
+    margin-left: 50%;
+}
+
