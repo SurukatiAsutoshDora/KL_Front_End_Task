@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="./styles.css">
+   
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="container-body" >
+    <div class="form-body">
+        <div class="row">
+            <div class="form-holder ">
+                <div class="form-content">
+                    <div class="form-items">
+                        <h3>Form</h3>
+                        <p>Fill in the data below.</p>
+                        <form class="requires-validation" novalidate>
+
+                            <div class="col-md-12">
+                               <input class="form-control" type="text" name="name" placeholder="Username" required>
+                               <div class="valid-feedback">Username field is valid!</div>
+                               <div class="invalid-feedback">Username field cannot be blank!</div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <select class="form-select mt-3" required>
+                                      <option selected disabled value="">UserType</option>
+                                      <option value="jweb">Admin</option>
+                                      <option value="sweb">Client</option>
+                               </select>
+                                <div class="valid-feedback">You selected a position!</div>
+                                <div class="invalid-feedback">Please select a position!</div>
+                           </div>
+
+
+                          <div class="col-md-12 contact_no">
+                               <input class="form-control" type="contactNumber" name="name" placeholder="  Contact no" required>
+                               <div class="valid-feedback">Username field is valid!</div>
+                               <div class="invalid-feedback">Username field cannot be blank!</div>
+                            </div>
+
+                            
+
+                            <div class="col-md-12">
+                                <input class="form-control" type="email" name="email" placeholder="E-mail Address" required>
+                                 <div class="valid-feedback">Email field is valid!</div>
+                                 <div class="invalid-feedback">Email field cannot be blank!</div>
+                            </div>
+
+                            <div class="col-md-12 container">
+                                <div class="form-select mt-3 form-group">
+                                  <select class="form-control" id="country" name="country">
+                                    <option value="">Select a country</option>
+                                    <div class="valid-feedback">country field is valid!</div>
+                                <div class="invalid-feedback">country field cannot be blank!</div>
+                                  </select>
+                                </div>
+                            </div>
+
+                            <!-- <div class="col-md-12 container">
+                                <div class="form-select mt-3 form-group">
+                                  <select class="form-control" id="city" name="city">
+                                    <option value="">Select a city</option>
+                                  </select>
+                                </div>
+                              </div> -->
+                              <div class="col-md-12">
+                                <input class="form-control" type="text" name="name" placeholder="State" required>
+                                <div class="valid-feedback">State field is valid!</div>
+                                <div class="invalid-feedback">state field cannot be blank!</div>
+                             </div> 
+                                
+                             <div class="col-md-12">
+                                <input class="form-control" type="text" name="name" placeholder="city" required>
+                                <div class="valid-feedback">City field is valid!</div>
+                                <div class="invalid-feedback">City field cannot be blank!</div>
+                             </div> 
+                         
+
+                  
+
+                            <div class="form-button mt-3">
+                                <button id="submit" type="submit" class="btn btn-primary">Register</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
