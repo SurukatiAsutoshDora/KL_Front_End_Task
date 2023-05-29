@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Form Validation</h1>
+        <form id="myForm">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" >
+                <div class="error" id="nameErr"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="role">Role:</label>
+                <select id="role" name="role" >
+                    <option value="" selected disabled>Select role</option>
+                    <option value="client">Client</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <div class="error" id="roleErr"></div>
+            </div>
+        
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" >
+                <div class="error" id="emailErr"></div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber"  placeholder="Enter your phone number" >
+                <div class="error" id="phoneErr"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <select id="country" name="country">
+                    <option value="" selected disabled>Select country</option>
+                </select>
+                <div class="error" id="countryErr"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" placeholder="Enter your city" >
+                <div class="error" id="cityErr"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" placeholder="Enter your state" >
+                <div class="error" id="stateErr"></div>
+            </div>
+
+            <button class="neon" type="submit">Submit</button>
+        </form>
+        <canvas id="backgroundCanvas"></canvas>
+
+        <div id="successMessage" class="success-message">
+            <img src="data:image/png;base64,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" alt="Thumbs Up">
+            <p>Form submitted successfully!</p>
+        </div>
+
+        <div id="unsuccessMessage" class="unsuccess-message">
+            <img class="unsuccesful-image"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvsZyScLSE8qtd71h3RBa8_EybrPZnmnkq12RRN7Zl0X5_mGFJdMk31N2CKuHeX75p1lc&usqp=CAU" alt="Thumbs Up">
+            <p class="notsub">Form Not submitted!</p>
+        </div>
+    
+        
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
